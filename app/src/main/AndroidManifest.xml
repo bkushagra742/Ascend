@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Core: notifications for quest/streak/reminder system -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Needed so WorkManager-scheduled reminders survive a device reboot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!--
+        Android 11+ package visibility (FR-FOC-02): without this, PackageManager
+        .queryIntentActivities() in FocusRepositoryImpl silently returns an empty/partial
+        list instead of every launchable app. This is the narrow, policy-compliant
+        alternative to the QUERY_ALL_PACKAGES permission — it only grants visibility into
+        apps that expose a MAIN/LAUNCHER activity, which is exactly the set Focus Lock's
+        app-picker needs and nothing more.
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".AscendApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ascend">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Ascend">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            FR-FOC-04: the full-screen redirect shown when a blocked app is opened with
+            Missions incomplete. exported=false — only Ascend's own service ever launches
+            this, no other app should be able to trigger it.
+        -->
+        <activity
+            android:name=".presentation.focus.FocusBlockActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ascend"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" />
+
+        <!--
+            FR-FOC-01..05: opt-in, off by default — see FocusLockScreen for the master
+            switch and FocusAccessibilityService kdoc for exactly what data this reads
+            (foreground package name only, nothing else; canRetrieveWindowContent=false
+            in the config XML backs that up structurally, not just by policy).
+        -->
+        <service
+            android:name=".core.focus.FocusAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/focus_accessibility_service_config" />
+        </service>
+
+    </application>
+
+</manifest>

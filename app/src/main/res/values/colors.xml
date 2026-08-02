@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        XML color resources needed for the window-level theme (themes.xml), which loads
+        before Compose does. These values MUST stay numerically identical to
+        core/theme/Color.kt's AscendColors — that Kotlin file is still the single source
+        of truth for anything Compose actually renders; this file exists only because the
+        Android window theme system requires XML color resources, not Compose Color objects.
+    -->
+    <color name="ascend_obsidian_black">#FF0A0A0A</color>
+    <color name="ascend_graphite">#FF151515</color>
+    <color name="ascend_crimson_red">#FFC62828</color>
+    <color name="ascend_royal_gold">#FFD4AF37</color>
+</resources>

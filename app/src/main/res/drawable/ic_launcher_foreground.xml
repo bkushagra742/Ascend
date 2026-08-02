@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Content kept within the center 66dp safe zone per Android adaptive icon spec —
+         converted directly from assets/appicon/ic_launcher_foreground.svg, nested
+         translate/scale preserved as nested <group> elements. -->
+    <group
+        android:translateX="54"
+        android:translateY="54"
+        android:scaleX="0.62"
+        android:scaleY="0.62">
+        <group
+            android:translateX="-32"
+            android:translateY="-32">
+            <path
+                android:fillColor="#C62828"
+                android:pathData="M20,4 L34,4 L26,40 L14,44 Z" />
+            <path
+                android:fillColor="#D4AF37"
+                android:pathData="M34,20 L48,20 L48,32 L42,32 L42,60 L30,60 L30,36 L22,36 Z" />
+        </group>
+    </group>
+</vector>

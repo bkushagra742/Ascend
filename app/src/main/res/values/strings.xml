@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ascend</string>
+    <string name="app_tagline">Level Up Your Real Life.</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_todays_missions">Today\'s Missions</string>
+    <string name="dashboard_level_format">Level %1$d</string>
+    <string name="dashboard_rank_format">%1$s Rank</string>
+    <string name="dashboard_view_all_quests">View All Quests</string>
+    <string name="dashboard_credits_format">%1$d Credits</string>
+    <string name="dashboard_essence_format">%1$d ENS</string>
+
+    <!-- Quests -->
+    <string name="quests_title">Quests</string>
+    <string name="quests_empty_state">No quests yet. Create your first Mission to start earning XP.</string>
+    <string name="quest_complete_action">Complete</string>
+    <string name="quest_completed_label">Completed</string>
+
+    <!-- Common -->
+    <string name="back">Back</string>
+    <string name="loading">Loading…</string>
+
+    <!-- Focus Lock (FR-FOC-*) -->
+    <string name="focus_lock_accessibility_description">Ascend uses this to check which app is in the foreground, so it can remind you to finish today\'s Missions before opening apps you\'ve chosen to limit. It does not read screen content, keystrokes, or any personal data — only the name of the app currently open.</string>
+    <string name="focus_lock_title">Focus Lock</string>
+    <string name="focus_block_title">Not so fast.</string>
+    <string name="focus_block_body">You asked Ascend to hold you to this. Finish today\'s Missions first, then this app is all yours.</string>
+    <string name="focus_block_cta">Go to Missions</string>
+    <string name="focus_block_dismiss">Not now — go home</string>
+</resources>

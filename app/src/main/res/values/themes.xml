@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Base application theme. This is the XML/window-level theme the manifest requires
+        BEFORE Compose content is set — it's what controls the window background color
+        during app cold-start (pre-Compose paint) and the system bars' initial appearance.
+        Actual UI theming (colors, typography) lives in core/theme/Theme.kt (Compose),
+        this XML theme just needs to not clash with it — hence AMOLED black background,
+        matching the design brief, so there's no white/light flash before Compose paints.
+    -->
+    <style name="Theme.Ascend" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/ascend_obsidian_black</item>
+        <item name="android:statusBarColor">@color/ascend_obsidian_black</item>
+        <item name="android:navigationBarColor">@color/ascend_obsidian_black</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+</resources>

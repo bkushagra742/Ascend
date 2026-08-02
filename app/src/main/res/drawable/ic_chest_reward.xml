@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!--
+        PLACEHOLDER — intentionally empty (transparent, renders as nothing).
+        Drop-in replacement instructions:
+          1. In Android Studio: right-click res/drawable > New > Vector Asset > Local file (SVG)
+             (for ic_chest_reward, this is the fastest path if you have an SVG source)
+          2. OR just replace this file directly at the same path/filename with a PNG/XML
+             of the same name (e.g. ic_chest_reward.png) — R.drawable.ic_chest_reward will resolve either way.
+        No Kotlin/Compose code needs to change when this file is replaced.
+    -->
+</vector>
