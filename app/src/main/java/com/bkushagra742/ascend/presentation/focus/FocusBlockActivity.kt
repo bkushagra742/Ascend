@@ -13,7 +13,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedButtonDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -106,7 +105,7 @@ private fun FocusBlockScreen(onGoToMissions: () -> Unit, onDismiss: () -> Unit) 
             OutlinedButton(
                 onClick = onDismiss,
                 modifier = Modifier.fillMaxWidth(),
-                colors = OutlinedButtonDefaults.outlinedButtonColors(contentColor = AscendColors.CoolGray),
+                colors = ButtonDefaults.outlinedButtonColors(contentColor = AscendColors.CoolGray),
             ) {
                 Text(stringResource(R.string.focus_block_dismiss))
             }
