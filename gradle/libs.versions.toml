@@ -72,8 +72,8 @@ okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor",
 
 lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie" }
 
-vico-compose = { group = "com.patrykandpatrick.vico", name = "compose", version.ref = "vico" }
-vico-compose-m3 = { group = "com.patrykandpatrick.vico", name = "compose-m3", version.ref = "vico" }
+vico-compose = { group = "com.patrykandpatryk.vico", name = "compose", version.ref = "vico" }
+vico-compose-m3 = { group = "com.patrykandpatryk.vico", name = "compose-m3", version.ref = "vico" }
 
 health-connect-client = { group = "androidx.health.connect", name = "connect-client", version.ref = "healthConnect" }
 
