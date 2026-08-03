@@ -7,3 +7,11 @@ plugins {
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.compose.compiler) apply false
 }
+
+allprojects {
+    configurations.all {
+        resolutionStrategy {
+            force("org.jetbrains.kotlin:kotlin-stdlib:2.0.21")
+        }
+    }
+}
