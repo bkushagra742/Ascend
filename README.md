@@ -111,4 +111,4 @@ Studio's Image Asset tool (Right-click `res` ▸ New ▸ Image Asset ▸ Adaptiv
 **Kushagra Singh Bisht** — Android Developer & Computer Science Student
 GitHub: [@bkushagra742](https://github.com/bkushagra742) · Portfolio: [bkushagra742.vercel.app](https://bkushagra742.vercel.app)
 
-**License:** All Rights Reserved...
+**License:** All Rights Reserved..
